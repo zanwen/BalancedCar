@@ -1,0 +1,10 @@
+.\objects\int_oled.o: Int\OLED\Int_OLED.c
+.\objects\int_oled.o: Int\OLED\Int_OLED.h
+.\objects\int_oled.o: .\Dri\Dri_SPI.h
+.\objects\int_oled.o: .\Start\stm32f10x.h
+.\objects\int_oled.o: .\Start\core_cm3.h
+.\objects\int_oled.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\int_oled.o: .\Start\system_stm32f10x.h
+.\objects\int_oled.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\int_oled.o: .\Com\Com_Delay.h
+.\objects\int_oled.o: Int\OLED\Int_OLEDFont.h

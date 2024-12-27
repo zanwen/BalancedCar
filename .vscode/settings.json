@@ -1,0 +1,25 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "logger.h": "c",
+        "stm32f10x.h": "c",
+        "dri_uart1.h": "c",
+        "app_task.h": "c",
+        "app_car.h": "c",
+        "freertos.h": "c",
+        "task.h": "c",
+        "dri_spi.h": "c",
+        "int_oled.h": "c",
+        "int_oledfont.h": "c",
+        "stdlib.h": "c",
+        "com_delay.h": "c",
+        "dri_tim.h": "c",
+        "int_tb6612.h": "c",
+        "int_hallencoder.h": "c",
+        "dri_i2c.h": "c",
+        "int_mpu6050.h": "c",
+        "dri_adc1.h": "c",
+        "queue.h": "c",
+        "com_kalmanfilter.h": "c"
+    }
+}
