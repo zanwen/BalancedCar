@@ -27,3 +27,4 @@
 .\objects\main.o: .\Com\logger.h
 .\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\main.o: .\Dri\Dri_UART2.h

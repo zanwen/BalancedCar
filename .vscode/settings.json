@@ -20,6 +20,7 @@
         "int_mpu6050.h": "c",
         "dri_adc1.h": "c",
         "queue.h": "c",
-        "com_kalmanfilter.h": "c"
+        "com_kalmanfilter.h": "c",
+        "dri_uart2.h": "c"
     }
 }

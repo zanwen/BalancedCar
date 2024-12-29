@@ -9,20 +9,10 @@
 #include "freertos.h"
 #include "logger.h"
 #include "task.h"
+#include "Dri_UART2.h"
 
 int main() {
     NVIC_SetPriorityGrouping(3);
-    Dri_UART1_Init();
-    Dri_ADC1_Init();
-    
-    Int_OLED_Init();
-    Int_TB6612_Init();
-    // Int_TB6612_SetPWM(0, 3600);
-    Int_HallEncoder_Init();
-    Int_MPU6050_Init();
-    
-    LOG_DEBUG("main started, %d, %d", sizeof(int), sizeof(long));
-
     FreeRTOS_Start();
 
     while (1) {

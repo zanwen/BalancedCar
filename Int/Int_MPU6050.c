@@ -5,9 +5,6 @@
 #include "logger.h"
 #include "math.h"
 
-#define PI 3.1415
-
-extern float angle;
 
 void Int_MPU6050_SetSampleRate(uint16_t sampleRate);
 static void Int_MPU6050_SetDLPF(uint16_t maxBandwidth);
@@ -159,20 +156,4 @@ void Int_MPU6050_ReadGyro(int16_t *gyroX, int16_t *gyroY, int16_t *gyroZ) {
     *gyroZ = (buf[4] << 8) | buf[5];
 }
 
-static int16_t accelX, accelY, accelZ;
-static int16_t gyroX, gyroY, gyroZ;
 
-float Int_MPU6050_ReadAngle(void) {
-    Int_MPU6050_ReadAccel(&accelX, &accelY, &accelZ);
-    Int_MPU6050_ReadGyro(&gyroX, &gyroY, &gyroZ);
-    // LOG_DEBUG("Accel X: %d, Y: %d, Z: %d", accelX, accelY, accelZ);
-    // LOG_DEBUG("Gyro X: %d, Y: %d, Z: %d", gyroX, gyroY, gyroZ);
-
-    // 倾角tanθ=accelX/accelY, atan2()获取arctan(accelX/accelY)=θ，弧度转角度θ*180/Π
-    // 通过重力在x轴和y轴上的加速度分量来计算倾角
-    float accel = (float)(atan2(accelX, accelZ) * 180 / PI);
-    // y轴角速度换算 [-32768, 32767]  => [-2000°/s, 2000°/s] 比例尺为16.4
-    float gyro = (float)(-gyroY / 16.4);
-    Com_KalmanFilter(accel, gyro);
-    return angle;
-}

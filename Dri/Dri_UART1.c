@@ -41,14 +41,15 @@ void Dri_UART1_Init(void) {
     NVIC_EnableIRQ(USART1_IRQn);
 }
 
-uint8_t buffer[100] = {0};
-uint8_t size = 0;
+static uint8_t buffer[100] = {0};
+static uint8_t size = 0;
 void USART1_IRQHandler(void) {
     if(USART1->SR & USART_SR_RXNE) {
         buffer[size++] = USART1->DR;
     }
     if(USART1->SR & USART_SR_IDLE) {
         USART1->DR; // dummy read for clearing IDLE flag
+        buffer[size] = '\0'; // null terminate the string for printf
         Dri_UART1_ReceiveCallback(buffer, size);
         size = 0;
     }
@@ -65,7 +66,7 @@ void Dri_UART1_SendByte(uint8_t byte) {
 }
 
 void Dri_UART1_SendBytes(uint8_t* bytes, u16 size) {
-    for (u16 i = 0; i < size; i++) {
+    for (uint16_t i = 0; i < size; i++) {
         Dri_UART1_SendByte(bytes[i]);
     }
 }

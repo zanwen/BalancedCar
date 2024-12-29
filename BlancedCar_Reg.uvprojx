@@ -455,6 +455,11 @@
               <FileType>1</FileType>
               <FilePath>.\Dri\Dri_ADC1.c</FilePath>
             </File>
+            <File>
+              <FileName>Dri_UART2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Dri\Dri_UART2.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -481,9 +486,6 @@
               <FilePath>.\Int\Int_MPU6050.c</FilePath>
             </File>
           </Files>
-        </Group>
-        <Group>
-          <GroupName>Mid</GroupName>
         </Group>
         <Group>
           <GroupName>App</GroupName>
@@ -517,6 +519,11 @@
               <FileName>Com_KalmanFilter.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Com\Com_KalmanFilter.c</FilePath>
+            </File>
+            <File>
+              <FileName>Com_PID.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Com\Com_PID.c</FilePath>
             </File>
           </Files>
         </Group>

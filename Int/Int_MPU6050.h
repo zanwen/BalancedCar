@@ -87,6 +87,4 @@ void Int_MPU6050_ReadAccel(int16_t *accelX, int16_t *accelY, int16_t *accelZ);
 
 void Int_MPU6050_ReadGyro(int16_t *gyroX, int16_t *gyroY, int16_t *gyroZ);
 
-float Int_MPU6050_ReadAngle(void);
-
 #endif /* __INT_MPU6050_H__ */
